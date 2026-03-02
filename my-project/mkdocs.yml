@@ -1,0 +1,15 @@
+site_name: Cátedra UNESCO TyAI
+theme: 
+  name: material
+  font: 
+    text: Montserrat
+    code: IBM Plex Mono
+nav:
+  - Home: "index.md"
+  - Actividades: "actividades.md"
+  - Quienes somos: "quienes-somos.md"
+  - Datos: "data.md"
+extra_css:
+  - stylesheets/overrides.css
+markdown_extensions:
+  - attr_list
