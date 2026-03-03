@@ -1,10 +1,8 @@
-# 
+# Actividades
 
-**Reunión con grupo de investigación**{: .texto-azul}
-
-*La reunión se realizo el dia 23 de enero de 2026*
-{: .texto-gris}
-
-![Reunión estratégica](images/reunion-unesco.png){: width="100%" style="border-radius: 8px;"}
-
-Se llevó a cabo un encuentro estratégico entre el equipo académico de la Cátedra UNESCO de Transparencia y Acceso a la Información y funcionarios de la administración pública municipal. La sesión se centró en la capacitación y el intercambio de buenas prácticas para fortalecer la gobernanza local abierta y garantizar el derecho ciudadano a la información.
+<div class="activity-card">
+  <h2>Participación ciudadana y gestión local: análisis de los mecanismos institucionales en municipios chilenos el caso de Parral</h2>
+  <p class="activity-epigraph"><em> La Cátedra UNESCO dirigida por Bernardo Navarrete presenta los exitosos resultados de investigación sobre participación ciudadana en Parral: estudio resalta la confianza y el trabajo vinculante entre el COSOC y el municipio.</em></p>
+  <img src="../images/actividad1.jpg" alt="Actividad 1" class="activity-photo">
+  <p>Descripción breve de la actividad...</p>
+</div>

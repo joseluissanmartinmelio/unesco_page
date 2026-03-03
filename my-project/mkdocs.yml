@@ -1,15 +1,26 @@
-site_name: Cátedra UNESCO TyAI
-theme: 
+site_name: Cátedra UNESCO de Transparencia y Acceso a la Información
+site_url: https://usuario.github.io/catedra-unesco
+site_description: Cátedra UNESCO dedicada a la investigación en transparencia y acceso a la información pública
+
+theme:
   name: material
-  font: 
-    text: Montserrat
-    code: IBM Plex Mono
-nav:
-  - Home: "index.md"
-  - Actividades: "actividades.md"
-  - Quienes somos: "quienes-somos.md"
-  - Datos: "data.md"
+  logo: images/logo.png
+  favicon: images/logo.png
+  language: es
+  palette:
+    - scheme: default
+      primary: #0477BF
+      accent: #0583F2
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.smooth_scroll
+
 extra_css:
-  - stylesheets/overrides.css
-markdown_extensions:
-  - attr_list
+  - stylesheets/extra.css
+
+nav:
+  - Inicio: index.md
+  - Quiénes Somos: quienes-somos.md
+  - Actividades: actividades.md
+  - Investigación y datos: investigacion.md
