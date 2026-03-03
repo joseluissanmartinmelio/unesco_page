@@ -1,3 +1,5 @@
+```txt
+
 catedra-unesco/
 │
 ├── mkdocs.yml                          # Configuración principal
@@ -21,3 +23,4 @@ catedra-unesco/
 │   │
 │   └── stylesheets/
 │       └── extra.css                   # Estilos personalizados
+```
