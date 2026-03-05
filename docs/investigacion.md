@@ -94,3 +94,17 @@ resultados indican que comunas con altos niveles de pobreza, menor tasa de educa
 superior y más endeudamiento tienen peores rendimientos, en contraposición con las 
 comunas con alcaldesas, más educación superior, mayor población comunal y mayor 
 porcentaje de votos del alcalde en la elección pasada.
+
+---
+
+## Datos
+
+> El siguiente es un dashboard para revisar los resultados longitudinales de las prioridades de la Encuesta de Estudios Públicos de Chile, se usan datos desde 1990 y 2025 (junio), permite realizar seguimiento de prioridades y tener una medida de covariación entre las mismas. La primera funcionalidad permite saber como ha evolucionado en el tiempo dicha prioridad, la segunda funcionalidad permite establecer la relación entre las prioridades (algunas aumentas mientras otras bajan, o viceversa). Todos los datos usados corresponden a el Centro de Estudios Públicos (2025).
+
+<iframe 
+  src="https://josesanmartindata.shinyapps.io/unesco_surveys/" 
+  width="100%" 
+  height="800px"
+  frameborder="0"
+  allowfullscreen>
+</iframe>

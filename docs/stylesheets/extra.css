@@ -210,3 +210,13 @@
     max-width: 100px;
   }
 }
+
+.stat-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.stat-card:has(a) {
+  cursor: pointer;
+}

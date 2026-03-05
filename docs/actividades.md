@@ -6,3 +6,12 @@
   <img src="../images/actividad1.jpg" alt="Actividad 1" class="activity-photo">
   <p>Descripción breve de la actividad...</p>
 </div>
+
+---
+
+<div class="activity-card">
+  <h2>otro</h2>
+  <p class="activity-epigraph"><em> epigrafe</em></p>
+  <img src="../images/actividad1.jpg" alt="Actividad 1" class="activity-photo">
+  <p>Descripción breve de la actividad...</p>
+</div>

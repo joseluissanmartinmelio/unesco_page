@@ -22,13 +22,17 @@ hide:
 <div class="stats-grid">
   
   <div class="stat-card">
-    <span class="stat-number">5</span>
-    <span class="stat-label">Publicaciones</span>
+    <a href="investigacion/#publicaciones" style="text-decoration: none; color: inherit;">
+      <span class="stat-number">5</span>
+      <span class="stat-label">Publicaciones</span>
+    </a>
   </div>
 
   <div class="stat-card">
-    <span class="stat-number">XX</span>
-    <span class="stat-label">Actividades</span>
+    <a href="actividades/" style="text-decoration: none; color: inherit;">
+      <span class="stat-number">XX</span>
+      <span class="stat-label">Actividades</span>
+    </a>
   </div>
 
   <div class="stat-card">
@@ -37,8 +41,10 @@ hide:
   </div>
 
   <div class="stat-card">
-    <span class="stat-number">4</span>
-    <span class="stat-label">Investigadores</span>
+    <a href="quienes-somos/" style="text-decoration: none; color: inherit;">
+      <span class="stat-number">4</span>
+      <span class="stat-label">Investigadores</span>
+    </a>
   </div>
 
 </div>
