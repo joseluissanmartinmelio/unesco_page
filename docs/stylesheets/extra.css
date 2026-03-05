@@ -169,3 +169,17 @@
   margin-bottom: 1rem;
   display: block;
 }
+
+/* ocultar footer
+/*################################ /*
+
+/* Ocultar completamente */
+.md-footer-meta {
+  display: none;
+}
+
+/* O hacerlo más discreto */
+.md-footer-meta {
+  opacity: 0.3;
+  font-size: 0.6rem;
+}
