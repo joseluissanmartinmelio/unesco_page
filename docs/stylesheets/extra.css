@@ -1,8 +1,29 @@
+/* Quitar logo */
+
+.md-header__button.md-logo {
+  display: none;
+}
+
+/*########################## */
+
+/* Elimina el padding propio de MkDocs en la página de inicio */
+.md-main__inner {
+  margin-top: 0;
+}
+
+.md-content__inner {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+
+/*########################## */
+
 /* === HERO / INICIO === */
 .hero-section {
   text-align: center;
-  padding: 6rem 2rem;
-  min-height: 80vh;
+  padding: 0.5rem 2rem;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +31,7 @@
 }
 
 .hero-logo {
-  width: 700px;
+  width: 550px;
   margin-bottom: 2rem;
 }
 
@@ -22,10 +43,10 @@
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   max-width: 600px;
   opacity: 0.75;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   line-height: 1.8;
 }
 
@@ -93,6 +114,8 @@
 
 
 /* Cifras clave del inicio
+/*################################ /*
+
 
 /* Contenedor de las cifras */
 .stats-grid {
@@ -132,7 +155,7 @@
 
 /* Estilo del texto descriptivo */
 .stat-label {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: #555;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -145,78 +168,4 @@
   color: #888;
   margin-bottom: 1rem;
   display: block;
-}
-
-/*################################ /*
-/* Los logos del inicio /*
-
-/* Contenedor principal de logos */
-.partners-section {
-  padding: 3rem 1rem;
-  margin-top: 4rem;
-  border-top: 1px solid #eee; /* Línea sutil de separación */
-  text-align: center;
-}
-
-.partners-section p {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #888;
-  margin-bottom: 2rem;
-  font-weight: 600;
-}
-
-/* Flexbox para alinear los logos */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 3rem; /* Espacio entre logos */
-  text-decoration: none; /* Quita cualquier subrayado accidental */
-}
-
-.logo-container a:hover .partner-logo {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-/* Estilo de las imágenes de los logos */
-.partner-logo {
-  max-width: 300px; /* Tamaño máximo */
-  height: auto;
-  max-height: 70px; /* Evita que logos verticales se vean gigantes */
-  filter: grayscale(100%); /* Efecto institucional en gris */
-  opacity: 0.6;
-  transition: all 0.4s ease;
-  object-fit: contain;
-}
-
-/* Efecto hover: Recuperan color y brillo */
-.partner-logo:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-/* Ajuste para móviles */
-@media (max-width: 600px) {
-  .logo-container {
-    gap: 1.5rem;
-  }
-  .partner-logo {
-    max-width: 100px;
-  }
-}
-
-.stat-card a {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.stat-card:has(a) {
-  cursor: pointer;
 }

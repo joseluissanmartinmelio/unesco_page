@@ -12,26 +12,16 @@ hide:
     Promovemos la investigación, formación y difusión del conocimiento 
     sobre transparencia, gobierno abierto y derecho de acceso a la información pública.
   </p>
-  <div class="hero-buttons">
-    <a href="quienes-somos/" class="md-button md-button--primary">Conócenos</a>
-    <a href="actividades/" class="md-button">Ver Actividades</a>
-  </div>
 </div>
 
+<!--TODO: Cambiar el logo por el de color amarillo de unitwin en png-->
 
 <div class="stats-grid">
   
   <div class="stat-card">
-    <a href="investigacion/#publicaciones" style="text-decoration: none; color: inherit;">
+    <a href="publicaciones/" style="text-decoration: none; color: inherit;">
       <span class="stat-number">5</span>
       <span class="stat-label">Publicaciones</span>
-    </a>
-  </div>
-
-  <div class="stat-card">
-    <a href="actividades/" style="text-decoration: none; color: inherit;">
-      <span class="stat-number">XX</span>
-      <span class="stat-label">Actividades</span>
     </a>
   </div>
 
@@ -47,17 +37,19 @@ hide:
     </a>
   </div>
 
-</div>
-
-
-<div class="partners-section">
-  <p>Con el apoyo de:</p>
-  <div class="logo-container">
-    <a href="https://www.usach.cl/" target="_blank" rel="noopener">
-      <img src="images/logo-universidad.png" alt="Universidad" class="partner-logo">
-    </a>
-    <a href="https://www.unesco.org/es" target="_blank" rel="noopener">
-      <img src="images/logo-unesco-global.png" alt="UNESCO" class="partner-logo">
+  <div class="stat-card">
+   <!--  <a href="quienes-somos/" style="text-decoration: none; color: inherit;">-->
+      <span class="stat-number">XXXX</span>
+      <span class="stat-label">Workshops
+      Seminarios</span>
     </a>
   </div>
+
+  <div class="stat-card">
+   <!--  <a href="quienes-somos/" style="text-decoration: none; color: inherit;">-->
+      <span class="stat-number">XXXX</span>
+      <span class="stat-label">Apariciones en prensa</span>
+    </a>
+  </div>
+
 </div>

@@ -22,5 +22,7 @@ extra_css:
 nav:
   - Inicio: index.md
   - Quiénes Somos: quienes-somos.md
-  - Actividades: actividades.md
-  - Investigación y datos: investigacion.md
+  - Publicaciones: publicaciones.md
+  - Investigación: investigacion.md
+  - Transferencia de conocimiento: transferencia_conocimiento.md
+  - Contacto: contacto.md
