@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Quienes somos
 
 La Cátedra UNESCO de Transparencia y Acceso a la Información reúne a investigadores 

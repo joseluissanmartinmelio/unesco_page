@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Publicaciones
 
 ### Percepciones ciudadanas sobre corrupción en chile 2020-2024. Un análisis de la "consulta ciudadana anticorrupción"
