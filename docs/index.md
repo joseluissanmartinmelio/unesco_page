@@ -14,8 +14,6 @@ hide:
   </p>
 </div>
 
-<!--TODO: Cambiar el logo por el de color amarillo de unitwin en png-->
-
 <div class="stats-grid">
   
   <div class="stat-card">

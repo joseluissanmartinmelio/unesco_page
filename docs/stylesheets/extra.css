@@ -114,7 +114,7 @@
 
 
 /* Cifras clave del inicio
-/*################################ /*
+/*################################ */
 
 
 /* Contenedor de las cifras */
@@ -182,4 +182,109 @@
 .md-footer-meta {
   opacity: 0.3;
   font-size: 0.6rem;
+}
+
+
+/* === CONTACTO === */
+/*################################ */
+
+/* === CONTACTO === */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.contact-card {
+  padding: 1.5rem;
+  border-left: 4px solid var(--md-default-fg-color--lighter);
+  background: var(--md-code-bg-color);
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-card--primary {
+  border-left-color: var(--md-primary-fg-color);
+}
+
+.contact-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+}
+
+.contact-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+}
+
+.contact-value:hover {
+  text-decoration: underline;
+}
+
+.contact-note {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* === PERFILES ACADÉMICOS === */
+
+.profiles-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 3rem;
+  margin: 1.5rem 0;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0.72;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.profile-card:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.profile-logo {
+  height: 32px !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: none;
+}
+
+/* Ocultar texto y flecha */
+.profile-name,
+.profile-arrow {
+  display: none;
+}
+
+/* Responsive móvil */
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .profiles-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
