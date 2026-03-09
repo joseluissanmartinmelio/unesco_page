@@ -159,6 +159,32 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+  /* Estado inicial: invisible */
+  opacity: 0;
+  transform: translateY(20px);
+
+  /* Animación de entrada */
+  animation: statFadeIn 0.45s ease forwards;
+}
+
+/* Retrasos escalonados — ajusta nth-child según cuántas tarjetas tengas */
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+.stat-card:nth-child(5) { animation-delay: 0.5s; }
+.stat-card:nth-child(6) { animation-delay: 0.7s; }
+
+@keyframes statFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Efecto al pasar el ratón */
