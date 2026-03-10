@@ -116,7 +116,15 @@ def grafico_animado_matplotlib(df):
     ax.set_ylim(0, 50)
 
     # --- Lógica de Animación ---
+    # Timing: estos valores controlan directamente los fps y pausas del vídeo MP4.
+    # fps del vídeo = 1000 / FRAME_INTERVAL_MS
+    FRAME_INTERVAL_MS = 400    # ms por frame de datos  → 2.5 fps
+    EVENT_PAUSE_FRAMES = 5    # frames repetidos al aparecer un evento → 10 × 400 ms = 2 s de pausa
+    END_PAUSE_FRAMES = 22      # frames de pausa al final con la línea completa → 20 × 400 ms = 8 s
+
     # Insertamos frames de evento cuando la serie alcanza cada fecha relevante.
+    # Los frames de evento se repiten EVENT_PAUSE_FRAMES veces para que la pausa
+    # sea visible en el vídeo embebido (repeat_delay no funciona en HTML5 video).
     frames = []
     pending_events = EVENTS.copy()
 
@@ -124,8 +132,15 @@ def grafico_animado_matplotlib(df):
         current_date = df.iloc[i]['fecha']
         while pending_events and current_date >= pending_events[0][0]:
             pending_events.pop(0)
-            frames.append(('event', i, len(EVENTS) - len(pending_events)))
+            event_count = len(EVENTS) - len(pending_events)
+            for _ in range(EVENT_PAUSE_FRAMES):
+                frames.append(('event', i, event_count))
         frames.append(('point', i))
+
+    # Pausa al final: repetir el último frame para que la línea completa quede visible.
+    last_idx = len(df) - 1
+    for _ in range(END_PAUSE_FRAMES):
+        frames.append(('point', last_idx))
 
     def update(frame_info):
         f_type = frame_info[0]
@@ -145,14 +160,14 @@ def grafico_animado_matplotlib(df):
             artists.extend((event_v_line, event_text))
         return tuple(artists)
 
-# 1. Configurar la animación para que repita (loop)
-    ani = animation.FuncAnimation(fig, update, frames=frames, interval=800, blit=True, repeat=True, repeat_delay=5000)
+    # repeat_delay no tiene efecto en vídeo HTML5; el loop lo maneja el atributo 'loop' del <video>.
+    ani = animation.FuncAnimation(fig, update, frames=frames, interval=FRAME_INTERVAL_MS, blit=True, repeat=False)
 
     # --- GUARDAR COMO HTML SIN CONTROLES Y EN LOOP ---
     print("Generando archivo HTML limpio...")
-    
+    print(f"  Timing: {FRAME_INTERVAL_MS} ms/frame ({1000/FRAME_INTERVAL_MS:.1f} fps), pausa en eventos: {EVENT_PAUSE_FRAMES * FRAME_INTERVAL_MS / 1000:.1f} s")
+
     # Convertimos la animación a una etiqueta de video HTML5
-    # 'controls=False' elimina el panel de la imagen que enviaste
     html_video = ani.to_html5_video()
     
     # Modificamos la etiqueta para que sea autoplay y loop infinito
