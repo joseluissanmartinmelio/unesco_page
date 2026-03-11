@@ -1,4 +1,23 @@
-<html><body style='background-color:#ffffff; display:flex; justify-content:center;'><video width="1000" height="600" autoplay loop muted playsinline autoplay>
+<html><head>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  /* Fuerza al video a ocupar todo el ancho disponible */
+  video {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    display: block;
+  }
+</style>
+</head><body><video width="1000" height="600" autoplay loop muted playsinline autoplay>
   <source type="video/mp4" src="data:video/mp4;base64,AAAAIGZ0eXBNNFYgAAACAE00ViBpc29taXNvMmF2YzEAAAAIZnJlZQABKdNtZGF0AAACrgYF//+q
 3EXpvebZSLeWLNgg2SPu73gyNjQgLSBjb3JlIDE2NCByMzEwOCAzMWUxOWY5IC0gSC4yNjQvTVBF
 Ry00IEFWQyBjb2RlYyAtIENvcHlsZWZ0IDIwMDMtMjAyMyAtIGh0dHA6Ly93d3cudmlkZW9sYW4u

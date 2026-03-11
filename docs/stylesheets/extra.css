@@ -1,5 +1,5 @@
 /* Quitar logo */
-
+/*TODO: Cambiar padding para ajustar margenes
 .md-header__button.md-logo {
   display: none;
 }
@@ -32,7 +32,7 @@
 
 .hero-logo {
   width: 850px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .hero-title {
@@ -338,4 +338,55 @@
   }
 }
 
+video {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
 
+
+/*Gráfico*/
+/*#####################################*/
+
+/* === HERO: logo + gráfico en paralelo === */
+.hero-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-left {
+  flex: 0 0 400px;          /* ancho fijo para el logo en monitor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-right {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Esto es para proporción 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+/* MONITOR */
+/* iframe en monitor: alto generoso para que el video respire */
+.chart-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* === movil (≤ 768px): apilado vertical === */
+@media (max-width: 600px) {
+  .hero-top { flex-direction: column; }
+  .hero-right { padding-bottom: 75%; /* Más alto para móviles si quieres */ }
+}

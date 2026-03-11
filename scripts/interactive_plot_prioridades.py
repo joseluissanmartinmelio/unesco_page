@@ -173,9 +173,31 @@ def grafico_animado_matplotlib(df):
     # Modificamos la etiqueta para que sea autoplay y loop infinito
     html_limpio = html_video.replace('controls', 'autoplay loop muted playsinline')
 
+    # CSS para hacer el <video> responsive: anula width/height fijos que pone matplotlib
+    css_responsive = """
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  /* Fuerza al video a ocupar todo el ancho disponible */
+  video {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    display: block;
+  }
+</style>
+"""
+
     # Guardamos el archivo
     with open("docs/interactive/prioridades_corrupcion.html", "w") as f:
-        f.write(f"<html><body style='background-color:#ffffff; display:flex; justify-content:center;'>{html_limpio}</body></html>")
+        f.write(f"<html><head>{css_responsive}</head><body>{html_limpio}</body></html>")
     
     print("Archivo 'prioridades_corrupcion.html' guardado (sin controles).")
 
@@ -186,4 +208,3 @@ if __name__ == "__main__":
     if data_limpio is not None:
         print("Iniciando visualización...")
         grafico_animado_matplotlib(data_limpio)
-
