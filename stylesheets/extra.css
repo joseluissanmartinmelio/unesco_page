@@ -1,0 +1,398 @@
+/* Quitar logo */
+.md-header__button.md-logo {
+  display: none;
+}
+
+/*########################## */
+
+/* Elimina el padding propio de MkDocs en la página de inicio */
+.md-main__inner {
+  margin-top: 0;
+}
+
+.md-content__inner {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+
+/*########################## */
+
+/* === HERO / INICIO === */
+.hero-section {
+  text-align: center;
+  padding: 0.5rem 2rem;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo {
+  width: 850px;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 0.8rem;
+  max-width: 600px;
+  opacity: 0.75;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* === EQUIPO — animación de entrada en cascada === */
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-member {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin: 2rem 0;
+
+  /* Estado inicial: invisible */
+  opacity: 0;
+
+  /* Animación */
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+/* Retrasos escalonados para cada bloque (nth-of-type) */
+.team-member:nth-of-type(1) { animation-delay: 0.1s; }
+.team-member:nth-of-type(2) { animation-delay: 0.35s; }
+.team-member:nth-of-type(3) { animation-delay: 0.6s; }
+.team-member:nth-of-type(4) { animation-delay: 0.85s; }
+.team-member:nth-of-type(5) { animation-delay: 1.1s; }
+
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.team-role {
+  color: var(--md-primary-fg-color);
+  font-weight: bold;
+  margin: 0.3rem 0;
+}
+
+/* === ACTIVIDADES === */
+.activity-card {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-left: 4px solid var(--md-primary-fg-color);
+  background: var(--md-code-bg-color);
+  border-radius: 0 8px 8px 0;
+}
+
+.activity-epigraph {
+  color: var(--md-default-fg-color--light);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.activity-photo {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* Responsive móvil */
+@media (max-width: 600px) {
+  .team-member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+
+
+/* Cifras clave del inicio
+/*################################ */
+
+
+/* Contenedor de las cifras */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 0 0 1.25rem;
+}
+
+/* Tarjeta individual */
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+  /* Estado inicial: invisible */
+  opacity: 0;
+  transform: translateY(20px);
+
+  /* Animación de entrada */
+  animation: statFadeIn 0.45s ease forwards;
+}
+
+/* Retrasos escalonados — ajusta nth-child según cuántas tarjetas tengas */
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+.stat-card:nth-child(5) { animation-delay: 0.5s; }
+.stat-card:nth-child(6) { animation-delay: 0.7s; }
+
+@keyframes statFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto al pasar el ratón */
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-color: #0077cc;
+}
+
+/* Estilo del número/cifra */
+.stat-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0077cc;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo del texto descriptivo */
+.stat-label {
+  font-size: 0.75rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Iconos (opcional si usas FontAwesome) */
+.stat-card i {
+  font-size: 1.5rem;
+  color: #888;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* ocultar footer
+/*################################ */
+
+/* Ocultar completamente */
+.md-footer-meta {
+  display: none;
+}
+
+/* O hacerlo más discreto */
+.md-footer-meta {
+  opacity: 0.3;
+  font-size: 0.6rem;
+}
+
+
+/* === CONTACTO === */
+/*################################ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.contact-card {
+  padding: 1.5rem;
+  border-left: 4px solid var(--md-default-fg-color--lighter);
+  background: var(--md-code-bg-color);
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contact-card--primary {
+  border-left-color: var(--md-primary-fg-color);
+}
+
+.contact-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+}
+
+.contact-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+}
+
+.contact-value:hover {
+  text-decoration: underline;
+}
+
+.contact-note {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* === PERFILES ACADÉMICOS === */
+
+.profiles-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 3rem;
+  margin: 1.5rem 0;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0.72;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.profile-card:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.profile-logo {
+  height: 32px !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: none;
+}
+
+/* Ocultar texto y flecha */
+.profile-name,
+.profile-arrow {
+  display: none;
+}
+
+/* Responsive móvil */
+@media (max-width: 600px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .profiles-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+video {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+
+/*Gráfico*/
+/*#####################################*/
+
+/* === HERO: logo + gráfico en paralelo === */
+.hero-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 0; /* Sin margen extra abajo */
+}
+
+/* Anula el margen automático entre bloques consecutivos en la portada */
+.md-typeset > .hero-top + .stats-grid {
+  margin-top: 0.5rem !important;
+}
+
+.hero-left {
+  flex: 0 0 500px;          /* ancho fijo para el logo en monitor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-right {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  padding-bottom: 38%; /* Reducido de 56.25% para que las tarjetas sean visibles al cargar */
+  height: 0;
+  overflow: hidden;
+}
+
+/* MONITOR */
+/* iframe en monitor: alto generoso para que el video respire */
+.chart-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* === movil (≤ 768px): apilado vertical === */
+@media (max-width: 600px) {
+  .hero-top { flex-direction: column; }
+  .hero-top { margin-bottom: 0.2rem; }
+  .md-typeset > .hero-top + .stats-grid { margin-top: -0.35rem !important; }
+  .hero-right { padding-bottom: 75%; /* Más alto para móviles si quieres */ }
+}
