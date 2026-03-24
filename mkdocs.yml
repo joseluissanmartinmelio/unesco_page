@@ -4,7 +4,7 @@ site_description: Cátedra UNESCO dedicada a la investigación en transparencia 
 
 theme:
   name: material
-  logo: images/icon.png
+  #logo: images/icon.png
   favicon: images/icon.png
   language: es
   palette:
